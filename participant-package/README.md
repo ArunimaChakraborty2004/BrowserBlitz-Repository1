@@ -50,7 +50,7 @@ participant-package/
 ├── css/
 │   └── style.css        # All styles
 ├── js/
-│   └── main.js          # ⚠️ ALL 8 BUGS ARE IN THIS FILE
+│   └── main.js         
 ├── package.json
 └── README.md
 ```
