@@ -1,11 +1,11 @@
-/* Global Styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* VISUAL BUG 1: Pulsating background animation - looks weird but doesn't break anything */
+
 @keyframes pulse-bg {
     0%, 100% { background-color: #f4f4f4; }
     50% { background-color: #f8f8f8; }
@@ -16,10 +16,10 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    animation: pulse-bg 4s ease-in-out infinite; /* VISUAL BUG 1: Annoying but harmless */
+    animation: pulse-bg 4s ease-in-out infinite; 
 }
 
-/* Navigation */
+
 .navbar {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     padding: 1rem 2rem;
@@ -29,7 +29,7 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* VISUAL BUG 2: Floating/bouncing logo animation - distracting but doesn't break nav */
+
 @keyframes float-logo {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
@@ -49,7 +49,7 @@ body {
     gap: 2rem;
 }
 
-/* VISUAL BUG 3: Rainbow color-changing nav links - flashy but functional */
+
 @keyframes rainbow-text {
     0% { color: #fff; }
     25% { color: #ffd700; }
@@ -63,17 +63,15 @@ body {
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s;
-    animation: rainbow-text 5s linear infinite; /* VISUAL BUG 3: Rainbow colors */
+    animation: rainbow-text 5s linear infinite; 
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: #ffd700;
-    animation: none; /* Stop animation on hover for usability */
-}
+    animation: none; 
 
-/* Hero Section */
-/* VISUAL BUG 4: Subtle shake animation - looks glitchy but text is readable */
+
 @keyframes shake-subtle {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-2px); }
@@ -87,7 +85,7 @@ body {
     text-align: center;
     padding: 4rem 2rem;
     margin-bottom: 2rem;
-    animation: shake-subtle 0.5s ease-in-out infinite; /* VISUAL BUG 4: Shaky hero */
+    animation: shake-subtle 0.5s ease-in-out infinite; 
 }
 
 .hero h1 {
@@ -100,7 +98,7 @@ body {
     margin-bottom: 2rem;
 }
 
-/* VISUAL BUG 5: Spinning button on hover - dramatic but still clickable */
+
 @keyframes spin-button {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
@@ -119,11 +117,10 @@ body {
 
 .cta-button:hover {
     background-color: #218838;
-    animation: spin-button 1s linear infinite; /* VISUAL BUG 5: Spinning button */
+    animation: spin-button 1s linear infinite; 
 }
 
-/* Featured Match */
-/* VISUAL BUG 6: Color-shifting background - looks weird but readable */
+
 @keyframes color-shift {
     0%, 100% { background-color: white; }
     50% { background-color: #f0f8ff; }
@@ -138,7 +135,7 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     position: relative;
     overflow: visible;
-    animation: color-shift 3s ease-in-out infinite; /* VISUAL BUG 6: Shifting colors */
+    animation: color-shift 3s ease-in-out infinite; 
 }
 
 .featured-match h2 {
@@ -160,7 +157,7 @@ body {
     flex: 1;
 }
 
-/* VISUAL BUG 7: Bouncing flag images - distracting but images still load */
+
 @keyframes bounce-flag {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
@@ -170,8 +167,7 @@ body {
     width: 80px;
     height: 60px;
     margin-bottom: 1rem;
-    animation: bounce-flag 1.5s ease-in-out infinite; /* VISUAL BUG 7: Bouncing flags */
-}
+    animation: bounce-flag 1.5s ease-in-out infinite; 
 
 .team h3 {
     font-size: 1.5rem;
@@ -179,7 +175,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* VISUAL BUG 8: Pulsating score - dramatic but score is still readable */
+
 @keyframes pulse-score {
     0%, 100% { transform: scale(1); color: #1e3c72; }
     50% { transform: scale(1.15); color: #ff4500; }
@@ -189,7 +185,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     color: #1e3c72;
-    animation: pulse-score 1s ease-in-out infinite; /* VISUAL BUG 8: Pulsating scores */
+    animation: pulse-score 1s ease-in-out infinite; 
 }
 
 .vs {
@@ -205,7 +201,7 @@ body {
     font-weight: bold;
 }
 
-/* Quick Search */
+
 .quick-search {
     max-width: 900px;
     margin: 3rem auto;
@@ -237,7 +233,7 @@ body {
     min-height: 50px;
 }
 
-/* Run Counter */
+
 .run-counter {
     max-width: 900px;
     margin: 3rem auto;
@@ -279,7 +275,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* VISUAL BUG 12: Rainbow gradient buttons - flashy but still clickable */
+
 @keyframes rainbow-gradient {
     0% { background: linear-gradient(45deg, #ff0000, #ff7f00); }
     25% { background: linear-gradient(45deg, #ffff00, #00ff00); }
@@ -297,13 +293,12 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    animation: rainbow-gradient 5s linear infinite; /* VISUAL BUG 12: Rainbow buttons */
+    animation: rainbow-gradient 5s linear infinite; 
 }
 
 .counter-btn:hover {
     background-color: #218838;
-    animation: none; /* Stop on hover for better UX */
-}
+    animation: none; 
 
 #reset-counter {
     background-color: #dc3545;
@@ -320,8 +315,7 @@ body {
     background-color: #c82333;
 }
 
-/* Footer */
-/* VISUAL BUG 9: Sliding footer text - weird but footer still works */
+
 @keyframes slide-footer {
     0%, 100% { transform: translateX(0); }
     50% { transform: translateX(20px); }
@@ -340,7 +334,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: slide-footer 3s ease-in-out infinite; /* VISUAL BUG 9: Sliding footer */
+    animation: slide-footer 3s ease-in-out infinite; 
 }
 
 .footer-content p {
@@ -362,7 +356,7 @@ footer {
     color: #ffd700;
 }
 
-/* Modal */
+
 .modal {
     display: none;
     position: fixed;
@@ -397,7 +391,7 @@ footer {
     color: #333;
 }
 
-/* Matches Page */
+
 .page-header {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     color: white;
@@ -416,7 +410,7 @@ footer {
     padding: 0 2rem;
 }
 
-/* VISUAL BUG 10: Glowing animated border - eye-catching but doesn't affect clicks */
+
 @keyframes glow-border {
     0%, 100% { box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     50% { box-shadow: 0 0 20px rgba(42, 82, 152, 0.8), 0 2px 4px rgba(0,0,0,0.1); }
@@ -431,7 +425,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: glow-border 2s ease-in-out infinite; /* VISUAL BUG 10: Glowing borders */
+    animation: glow-border 2s ease-in-out infinite; 
 }
 
 .match-date {
@@ -490,7 +484,7 @@ footer {
     min-height: 50px;
 }
 
-/* Stats Page */
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -500,7 +494,7 @@ footer {
     padding: 0 2rem;
 }
 
-/* VISUAL BUG 11: Wobbling stat cards - looks unstable but content is readable */
+
 @keyframes wobble-card {
     0%, 100% { transform: rotate(0deg); }
     25% { transform: rotate(-3deg); }
@@ -513,7 +507,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-align: center;
-    animation: wobble-card 2s ease-in-out infinite; /* VISUAL BUG 11: Wobbling cards */
+    animation: wobble-card 2s ease-in-out infinite; 
 }
 
 .stat-card h3 {
@@ -637,7 +631,7 @@ footer {
     min-height: 100px;
 }
 
-/* Tickets Page */
+
 .ticket-booking {
     max-width: 1200px;
     margin: 0 auto 3rem;
