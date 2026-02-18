@@ -7,9 +7,8 @@ Welcome to the Browser Blitz debugging challenge! Your mission is to fix a broke
 
 ## 🎯 Your Mission
 
-This is a Cricket World Cup 2026 website with **8 functional bugs** hidden in the JavaScript code. Your job is to find and fix all of them.
+This is a Cricket World Cup 2026 website with **bugs** hidden in the code. Your job is to find and fix all of them.
 
-**Important:** There are also visual bugs (weird animations and effects) - these are **decoys**! Ignore them and focus only on broken functionality.
 
 ---
 
