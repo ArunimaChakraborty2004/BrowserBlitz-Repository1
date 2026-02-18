@@ -1,0 +1,817 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VISUAL BUG 1: Pulsating background animation - looks weird but doesn't break anything */
+@keyframes pulse-bg {
+    0%, 100% { background-color: #f4f4f4; }
+    50% { background-color: #f8f8f8; }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    animation: pulse-bg 4s ease-in-out infinite; /* VISUAL BUG 1: Annoying but harmless */
+}
+
+/* Navigation */
+.navbar {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* VISUAL BUG 2: Floating/bouncing logo animation - distracting but doesn't break nav */
+@keyframes float-logo {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.logo {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    animation: float-logo 2s ease-in-out infinite; /* VISUAL BUG 2: Bouncing logo */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+/* VISUAL BUG 3: Rainbow color-changing nav links - flashy but functional */
+@keyframes rainbow-text {
+    0% { color: #fff; }
+    25% { color: #ffd700; }
+    50% { color: #ff69b4; }
+    75% { color: #00ff00; }
+    100% { color: #fff; }
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    animation: rainbow-text 5s linear infinite; /* VISUAL BUG 3: Rainbow colors */
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffd700;
+    animation: none; /* Stop animation on hover for usability */
+}
+
+/* Hero Section */
+/* VISUAL BUG 4: Subtle shake animation - looks glitchy but text is readable */
+@keyframes shake-subtle {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+.hero {
+    background: linear-gradient(rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.8)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231e3c72" width="1200" height="600"/></svg>');
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    animation: shake-subtle 0.5s ease-in-out infinite; /* VISUAL BUG 4: Shaky hero */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+/* VISUAL BUG 5: Spinning button on hover - dramatic but still clickable */
+@keyframes spin-button {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.cta-button {
+    background-color: #28a745;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+    animation: spin-button 1s linear infinite; /* VISUAL BUG 5: Spinning button */
+}
+
+/* Featured Match */
+/* VISUAL BUG 6: Color-shifting background - looks weird but readable */
+@keyframes color-shift {
+    0%, 100% { background-color: white; }
+    50% { background-color: #f0f8ff; }
+}
+
+.featured-match {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: visible;
+    animation: color-shift 3s ease-in-out infinite; /* VISUAL BUG 6: Shifting colors */
+}
+
+.featured-match h2 {
+    text-align: center;
+    color: #1e3c72;
+    margin-bottom: 2rem;
+}
+
+.match-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.team {
+    text-align: center;
+    flex: 1;
+}
+
+/* VISUAL BUG 7: Bouncing flag images - distracting but images still load */
+@keyframes bounce-flag {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.team img {
+    width: 80px;
+    height: 60px;
+    margin-bottom: 1rem;
+    animation: bounce-flag 1.5s ease-in-out infinite; /* VISUAL BUG 7: Bouncing flags */
+}
+
+.team h3 {
+    font-size: 1.5rem;
+    color: #2a5298;
+    margin-bottom: 0.5rem;
+}
+
+/* VISUAL BUG 8: Pulsating score - dramatic but score is still readable */
+@keyframes pulse-score {
+    0%, 100% { transform: scale(1); color: #1e3c72; }
+    50% { transform: scale(1.15); color: #ff4500; }
+}
+
+.score {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e3c72;
+    animation: pulse-score 1s ease-in-out infinite; /* VISUAL BUG 8: Pulsating scores */
+}
+
+.vs {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #666;
+}
+
+.match-status {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Quick Search */
+.quick-search {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.quick-search h2 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+#player-search {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid #2a5298;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#search-results {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+    min-height: 50px;
+}
+
+/* Run Counter */
+.run-counter {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.run-counter h2 {
+    color: #1e3c72;
+    margin-bottom: 2rem;
+}
+
+.counter-display {
+    background: #1e3c72;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+#run-count {
+    font-size: 4rem;
+    font-weight: bold;
+    display: block;
+}
+
+.label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.counter-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* VISUAL BUG 12: Rainbow gradient buttons - flashy but still clickable */
+@keyframes rainbow-gradient {
+    0% { background: linear-gradient(45deg, #ff0000, #ff7f00); }
+    25% { background: linear-gradient(45deg, #ffff00, #00ff00); }
+    50% { background: linear-gradient(45deg, #00ffff, #0000ff); }
+    75% { background: linear-gradient(45deg, #8b00ff, #ff00ff); }
+    100% { background: linear-gradient(45deg, #ff0000, #ff7f00); }
+}
+
+.counter-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: rainbow-gradient 5s linear infinite; /* VISUAL BUG 12: Rainbow buttons */
+}
+
+.counter-btn:hover {
+    background-color: #218838;
+    animation: none; /* Stop on hover for better UX */
+}
+
+#reset-counter {
+    background-color: #dc3545;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reset-counter:hover {
+    background-color: #c82333;
+}
+
+/* Footer */
+/* VISUAL BUG 9: Sliding footer text - weird but footer still works */
+@keyframes slide-footer {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+}
+
+footer {
+    background-color: #1e3c72;
+    color: white;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slide-footer 3s ease-in-out infinite; /* VISUAL BUG 9: Sliding footer */
+}
+
+.footer-content p {
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffd700;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+/* Matches Page */
+.page-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+}
+
+.matches-container {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+}
+
+/* VISUAL BUG 10: Glowing animated border - eye-catching but doesn't affect clicks */
+@keyframes glow-border {
+    0%, 100% { box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    50% { box-shadow: 0 0 20px rgba(42, 82, 152, 0.8), 0 2px 4px rgba(0,0,0,0.1); }
+}
+
+.match-item {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: glow-border 2s ease-in-out infinite; /* VISUAL BUG 10: Glowing borders */
+}
+
+.match-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.match-teams {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1e3c72;
+}
+
+.notify-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.notify-btn:hover {
+    background-color: #0056b3;
+}
+
+.filter-section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.filter-section h2 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+#team-filter {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid #2a5298;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#filter-results {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+    min-height: 50px;
+}
+
+/* Stats Page */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+}
+
+/* VISUAL BUG 11: Wobbling stat cards - looks unstable but content is readable */
+@keyframes wobble-card {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
+
+.stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    animation: wobble-card 2s ease-in-out infinite; /* VISUAL BUG 11: Wobbling cards */
+}
+
+.stat-card h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2a5298;
+    margin-bottom: 0.5rem;
+}
+
+.stat-detail {
+    color: #666;
+    font-size: 1rem;
+}
+
+.calculator-section {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.calculator-section h2 {
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.calculator label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.calculator input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid #2a5298;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#calculate-sr {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+#calculate-sr:hover {
+    background-color: #218838;
+}
+
+.result {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.result p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#strike-rate {
+    font-weight: bold;
+    color: #1e3c72;
+    font-size: 1.5rem;
+}
+
+.rankings {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.rankings h2 {
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#load-rankings {
+    display: block;
+    margin: 0 auto 1.5rem;
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#load-rankings:hover {
+    background-color: #0056b3;
+}
+
+#rankings-list {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+    min-height: 100px;
+}
+
+/* Tickets Page */
+.ticket-booking {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+}
+
+.ticket-booking h2 {
+    color: #1e3c72;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ticket-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.ticket-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.ticket-card:hover {
+    transform: translateY(-5px);
+}
+
+.ticket-card h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 1.5rem;
+}
+
+.select-ticket {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.select-ticket:hover {
+    background-color: #0056b3;
+}
+
+.booking-summary {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.booking-summary h3 {
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+}
+
+.booking-summary label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+}
+
+.booking-summary input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid #2a5298;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#calculate-total {
+    width: 100%;
+    background-color: #ffc107;
+    color: #333;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+#calculate-total:hover {
+    background-color: #e0a800;
+}
+
+.total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e3c72;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#submit-booking {
+    width: 100%;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid #2a5298;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .match-card {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        gap: 0.5rem;
+    }
+}

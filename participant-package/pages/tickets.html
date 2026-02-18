@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket World Cup 2026 - Tickets</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">🏏 Cricket World Cup 2026</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="matches.html">Matches</a></li>
+                <li><a href="stats.html">Stats</a></li>
+                <li><a href="tickets.html" class="active">Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Book Your Tickets</h1>
+        </section>
+
+        <section class="ticket-booking">
+            <h2>Select Your Package</h2>
+            <div class="ticket-options">
+                <div class="ticket-card">
+                    <h3>General Admission</h3>
+                    <p class="price" data-price="50">$50</p>
+                    <button class="select-ticket" data-type="general" data-price="50">Select</button>
+                </div>
+
+                <div class="ticket-card">
+                    <h3>Premium Seating</h3>
+                    <p class="price" data-price="150">$150</p>
+                    <button class="select-ticket" data-type="premium" data-price="150">Select</button>
+                </div>
+
+                <div class="ticket-card">
+                    <h3>VIP Experience</h3>
+                    <p class="price" data-price="500">$500</p>
+                    <button class="select-ticket" data-type="vip" data-price="500">Select</button>
+                </div>
+            </div>
+
+            <div class="booking-summary">
+                <h3>Your Booking</h3>
+                <p>Selected: <span id="selected-type">None</span></p>
+                <label for="quantity">Number of Tickets:</label>
+                <input type="number" id="quantity" value="1" min="1" max="10">
+                <button id="calculate-total">Calculate Total</button>
+                <p class="total">Total: $<span id="total-price">0</span></p>
+                <button id="submit-booking" class="cta-button">Complete Booking</button>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Cricket World Cup. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#facebook">Facebook</a>
+                <a href="#twitter">Twitter</a>
+                <a href="#instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

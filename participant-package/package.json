@@ -1,0 +1,22 @@
+{
+  "name": "browser-blitz-team-07",
+  "version": "1.0.0",
+  "description": "Cricket World Cup 2026 - Browser Blitz Challenge",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "serve": "npx http-server -p 8000"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "keywords": [
+    "cricket",
+    "browser-blitz",
+    "debugging",
+    "challenge"
+  ],
+  "author": "Browser Blitz Team 07",
+  "license": "MIT"
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket World Cup 2026 - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">🏏 Cricket World Cup 2026</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/matches.html">Matches</a></li>
+                <li><a href="pages/stats.html">Stats</a></li>
+                <li><a href="pages/tickets.html">Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Cricket World Cup 2026</h1>
+            <p>Experience the thrill of international cricket!</p>
+            <button id="watch-highlights" class="cta-button">Watch Highlights</button>
+        </section>
+
+        <section class="featured-match">
+            <h2>Featured Match Today</h2>
+            <div class="match-card">
+                <div class="team">
+                    <img src="https://flagcdn.com/w80/in.png" alt="India Flag">
+                    <h3>India</h3>
+                    <p class="score">287/6</p>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                    <img src="https://flagcdn.com/w80/au.png" alt="Australia Flag">
+                    <h3>Australia</h3>
+                    <p class="score">245/10</p>
+                </div>
+            </div>
+            <p class="match-status">India won by 42 runs</p>
+        </section>
+
+        <section class="quick-search">
+            <h2>Search Players</h2>
+            <input type="text" id="player-search" placeholder="Search by player name...">
+            <div id="search-results"></div>
+        </section>
+
+        <section class="run-counter">
+            <h2>Live Run Counter</h2>
+            <div class="counter-display">
+                <span id="run-count">0</span>
+                <span class="label">Runs</span>
+            </div>
+            <div class="counter-buttons">
+                <button class="counter-btn" data-value="1">+1</button>
+                <button class="counter-btn" data-value="2">+2</button>
+                <button class="counter-btn" data-value="4">+4</button>
+                <button class="counter-btn" data-value="6">+6</button>
+                <button id="reset-counter">Reset</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Cricket World Cup. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#facebook">Facebook</a>
+                <a href="#twitter">Twitter</a>
+                <a href="#instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="highlights-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Match Highlights</h2>
+            <p>Coming soon! Watch the best moments from today's matches.</p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

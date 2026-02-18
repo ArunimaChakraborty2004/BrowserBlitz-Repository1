@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket World Cup 2026 - Stats</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">🏏 Cricket World Cup 2026</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="matches.html">Matches</a></li>
+                <li><a href="stats.html" class="active">Stats</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Tournament Statistics</h1>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Top Scorer</h3>
+                <p class="stat-value">Virat Kohli</p>
+                <p class="stat-detail">487 runs</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Most Wickets</h3>
+                <p class="stat-value">Mitchell Starc</p>
+                <p class="stat-detail">28 wickets</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Highest Score</h3>
+                <p class="stat-value">AB de Villiers</p>
+                <p class="stat-detail">176* runs</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Best Bowling</h3>
+                <p class="stat-value">Jasprit Bumrah</p>
+                <p class="stat-detail">6/19</p>
+            </div>
+        </section>
+
+        <section class="calculator-section">
+            <h2>Strike Rate Calculator</h2>
+            <div class="calculator">
+                <label for="runs-scored">Runs Scored:</label>
+                <input type="number" id="runs-scored" value="0">
+                
+                <label for="balls-faced">Balls Faced:</label>
+                <input type="number" id="balls-faced" value="1">
+                
+                <button id="calculate-sr">Calculate Strike Rate</button>
+                
+                <div class="result">
+                    <p>Strike Rate: <span id="strike-rate">0.00</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="rankings">
+            <h2>Team Rankings</h2>
+            <button id="load-rankings">Load Rankings</button>
+            <div id="rankings-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Cricket World Cup. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#facebook">Facebook</a>
+                <a href="#twitter">Twitter</a>
+                <a href="#instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

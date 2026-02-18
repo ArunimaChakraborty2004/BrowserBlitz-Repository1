@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket World Cup 2026 - Matches</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">🏏 Cricket World Cup 2026</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="matches.html" class="active">Matches</a></li>
+                <li><a href="stats.html">Stats</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Upcoming Matches</h1>
+        </section>
+
+        <section class="matches-container">
+            <div class="match-item">
+                <div class="match-date">March 15, 2026</div>
+                <div class="match-teams">
+                    <span>England vs Pakistan</span>
+                </div>
+                <button class="notify-btn" data-match="england-pakistan">Notify Me</button>
+            </div>
+
+            <div class="match-item">
+                <div class="match-date">March 18, 2026</div>
+                <div class="match-teams">
+                    <span>South Africa vs New Zealand</span>
+                </div>
+                <button class="notify-btn" data-match="sa-nz">Notify Me</button>
+            </div>
+
+            <div class="match-item">
+                <div class="match-date">March 20, 2026</div>
+                <div class="match-teams">
+                    <span>India vs Sri Lanka</span>
+                </div>
+                <button class="notify-btn" data-match="ind-sl">Notify Me</button>
+            </div>
+
+            <div class="match-item">
+                <div class="match-date">March 22, 2026</div>
+                <div class="match-teams">
+                    <span>Australia vs West Indies</span>
+                </div>
+                <button class="notify-btn" data-match="aus-wi">Notify Me</button>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <h2>Filter by Team</h2>
+            <input type="text" id="team-filter" placeholder="Enter team name...">
+            <div id="filter-results"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Cricket World Cup. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#facebook">Facebook</a>
+                <a href="#twitter">Twitter</a>
+                <a href="#instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
