@@ -169,61 +169,6 @@ document.getElementById('rankings-list')   // works!
 
 ---
 
-## 🎨 Visual "Bugs" to IGNORE
-
-You'll see many weird visual effects. These are **NOT bugs** to fix - they're decoys!
-
-**Ignore these:**
-- ❌ Pulsating background colors
-- ❌ Bouncing logo
-- ❌ Rainbow-colored navigation links
-- ❌ Shaking hero section
-- ❌ Spinning buttons on hover
-- ❌ Color-shifting backgrounds
-- ❌ Bouncing flag images
-- ❌ Pulsating score numbers
-- ❌ Sliding footer
-- ❌ Glowing borders
-- ❌ Wobbling cards
-- ❌ Rainbow gradient buttons
-
-**Focus only on:**
-- ✅ Buttons that don't work
-- ✅ Forms that don't submit
-- ✅ Searches that don't find results
-- ✅ Calculations that are wrong
-- ✅ Modals that don't open
-- ✅ Data that doesn't display
-
-**Remember:** If it's just visual/animation weirdness but still clickable/usable, ignore it!
-
----
-
-## ✅ How to Know You're Done
-
-You've successfully fixed all bugs when:
-
-1. Every button does something when clicked
-2. All search/filter inputs work properly (case-insensitive)
-3. All calculations show correct numbers
-4. All modals and popups open/close correctly
-5. All data loads and displays when requested
-6. No red errors in the browser Console
-7. Every interactive feature works smoothly
-
-**Hint:** There are exactly **8 functional bugs** to find. Keep track of what you've fixed!
-
----
-
-## ⏱️ Time Challenge
-
-- **Target Time:** 45-60 minutes
-- **Difficulty:** Medium
-- **Hint:** Most bugs are related to data types or selector typos
-
-Don't worry if you don't finish in time - the goal is learning, not speed!
-
----
 
 ## 📚 Helpful Resources
 
@@ -273,27 +218,6 @@ By completing this challenge, you'll gain experience with:
 - **Problem Solving** - Systematic debugging approach
 - **Code Reading** - Understanding existing code quickly
 
----
-
-## 📝 Tips for Success
-
-✅ **DO:**
-- Test every feature manually first
-- Use browser Console constantly
-- Fix one bug at a time
-- Hard refresh after each fix (Ctrl+Shift+R)
-- Read error messages carefully
-- Use console.log() to check values
-- Take breaks if stuck
-
-❌ **DON'T:**
-- Try to fix CSS/visual bugs (they're decoys!)
-- Make random changes hoping something works
-- Fix multiple bugs without testing between
-- Ignore Console errors
-- Give up too quickly on tough bugs
-
----
 
 ## 🏆 Success Criteria
 
@@ -342,4 +266,3 @@ Good luck and happy debugging! 🏏
 ---
 
 *Browser Blitz - Cricket World Cup 2026 Challenge*  
-*Difficulty: Medium | Time: 45-60 minutes*
